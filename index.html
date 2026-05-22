@@ -718,29 +718,34 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
     <div class="project-card reveal reveal-delay-1">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
-        <div class="pc-num">Retention & Growth Analysis — 02</div>
-        <h3 class="pc-title">Retention Audit: Diagnosing Drop-Off Behind Strong Revenue <span style="font-size:0.65rem;font-style:normal;color:rgba(201,169,154,0.5);font-family:var(--font-body);letter-spacing:0.1em;">(Project)</span></h3>
+        <div class="pc-num">GA4 Ecommerce Analytics — 02</div>
+        <h3 class="pc-title">Full-Funnel GA4 Analysis: Diagnosing a 90.3% Cart Abandonment Rate Across Channels & Devices</h3>
         <div class="pc-tags">
-          <span class="pc-tag">GA4</span><span class="pc-tag">Excel</span><span class="pc-tag">Retention Analysis</span><span class="pc-tag">Case Study</span>
+          <span class="pc-tag">GA4</span><span class="pc-tag">Looker Studio</span><span class="pc-tag">Attribution Analysis</span><span class="pc-tag">Funnel Analysis</span>
         </div>
-        <div class="pc-finding"><strong>Business Problem:</strong> Chewy's revenue was up 80% YoY — but Android traffic was down 31% in the same period. One number was doing all the talking.</div>
-        <div class="pc-finding" style="margin-top:8px;"><strong>Objective:</strong> Determine whether mobile drop-off was a device-specific UX issue or a broader retention problem.</div>
-        <div class="pc-rec"><strong>Key Insight:</strong> Android engagement time was declining alongside traffic — a mobile experience problem, not a seasonal dip. Revenue growth was masking a retention floor that would compound as acquisition scaled.</div>
-        <div class="pc-stat">Recommendation → Fix mobile retention before scaling acquisition spend.</div>
+        <div class="pc-finding"><strong>Business Problem:</strong> The Google Merchandise Store was generating $526K in revenue across 319K sessions — but 90.3% of users who added items to cart never completed a purchase. Traffic was healthy. Conversion was broken.</div>
+        <div class="pc-finding" style="margin-top:8px;"><strong>Objective:</strong> Identify where the funnel was leaking, which channels were driving buyers vs. browsers, and whether last-click attribution was misrepresenting channel value.</div>
+        <div class="pc-rec"><strong>Key Insight:</strong> The biggest drop-off was not at checkout — it was at the product page. 75.5% of users who viewed a product never added it to cart, pointing to a product page problem rather than a checkout problem. Desktop converted at 8.11% vs. 2.31% on mobile — a 3.5x gap signaling significant mobile UX issues. Under last-click attribution, Email and Organic Shopping appeared small; data-driven attribution revealed both were significantly undervalued, with Organic Shopping's revenue contribution jumping 17.31%.</div>
+        <div class="pc-stat">$526K revenue · 20.54% conversion rate · 90-day analysis · 3-page Looker Studio dashboard</div>
         <button class="pc-toggle" onclick="toggleCard(this)"><span class="pc-toggle-icon">+</span> Full case study</button>
         <div class="pc-drawer">
           <div class="pc-drawer-section">
             <div class="pc-drawer-label">Analysis</div>
-            <p class="pc-drawer-body">Analyzed acquisition, engagement, and device-level performance data in GA4 and Excel. Compared returning-user behavior across platforms and channels to identify where drop-off was concentrated.</p>
+            <p class="pc-drawer-body">Conducted a full GA4 audit of the Google Merchandise Store demo account across a 90-day period. Built a funnel exploration from view_item → add_to_cart → begin_checkout → purchase with device-level and channel-level breakdowns. Compared last-click vs. data-driven attribution models to identify misattributed channel credit. Pulled traffic acquisition data across 10 channels analyzing sessions, engagement rate, session key event rate, and revenue side by side.</p>
           </div>
           <div class="pc-drawer-section">
-            <div class="pc-drawer-label">Key Finding</div>
-            <p class="pc-drawer-body">Android traffic declined ~31% YoY alongside lower engagement time on mobile. Revenue growth was masking a retention problem that would compound as acquisition scaled — a leaky floor, not a foundation.</p>
+            <div class="pc-drawer-label">Key Findings</div>
+            <p class="pc-drawer-body">Direct traffic dominated sessions (65.6%) but had the lowest engagement rate (21.68%) and worst key event rate (11.71%) — high volume, low quality. Organic Shopping had just 0.24% of sessions but a 74.87% key event rate — the highest converting channel by far. Paid Search generated $46K in revenue from only 2.43% of sessions, the highest revenue-per-session of any channel. Data-driven attribution revealed Email (+9.92%) and Cross-network (+10.66%) were systematically undercredited under last-click.</p>
           </div>
           <div class="pc-drawer-section">
-            <div class="pc-drawer-label">Impact</div>
-            <p class="pc-drawer-body">Surfaced a retention risk buried under top-line growth. Recommendation: prioritize mobile UX improvements before pushing acquisition further, or risk scaling into a problem that erodes unit economics.</p>
+            <div class="pc-drawer-label">Recommendations</div>
+            <p class="pc-drawer-body">Prioritize mobile UX improvements — specifically product pages and checkout flow on mobile, where a 1% conversion lift would represent significant revenue given mobile's session share. Shift budget reporting to data-driven attribution before making channel investment decisions. Protect Email and Organic Shopping budgets — cutting them based on last-click data would be a costly mistake. Investigate Unassigned traffic (8.92% of sessions, 5.71% engagement) as a data quality gap diluting overall metrics.</p>
           </div>
+        </div>
+        <div style="display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://datastudio.google.com/reporting/7c6442d3-76ef-46a0-90bf-eaa783f1b82b" target="_blank" class="proj-link" style="font-size:0.8rem;">
+            <span class="proj-arrow-line"></span>Live Looker Studio dashboard
+          </a>
         </div>
         <div class="pc-spacer"></div>
       </div>
