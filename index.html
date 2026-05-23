@@ -412,6 +412,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
   .streamlit-panel { min-height: 300px; }
   .streamlit-frame { min-height: 240px; }
   .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid > .project-card[style*="grid-column"] > div[style*="grid-template-columns"] { grid-template-columns: 1fr; }
   .projects-minor { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 52px; }
   footer { flex-direction: column; gap: 10px; text-align: center; padding: 22px 28px; }
@@ -450,12 +451,12 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
   <div class="hero-left">
 
     <div class="hero-top">
-      <div class="hero-eyebrow">Dallas, TX · Open to Remote & Relocation</div>
+      <div class="hero-eyebrow">Dallas, TX · Open to Remote &amp; Relocation</div>
       <h1 class="hero-name">
         <span class="line"><span>Shweta</span></span>
         <span class="line"><span><em style="font-style:italic;color:var(--taupe)">Kataria</em></span></span>
       </h1>
-      <p class="hero-role">Growth Marketing Analyst — Lifecycle Strategy & Performance Analytics.</p>
+      <p class="hero-role">Growth Marketing Analyst — Lifecycle Strategy &amp; Performance Analytics.</p>
     </div>
 
     <div class="hero-spacer"></div>
@@ -512,28 +513,28 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="approach-step reveal reveal-delay-1">
         <span class="step-num">01</span>
         <div>
-          <div class="step-title">Audience Segmentation & RFM Modeling</div>
+          <div class="step-title">Audience Segmentation &amp; RFM Modeling</div>
           <p class="step-body">Moving beyond basic groupings to analyze customer value. I use Python and SQL to build RFM (Recency, Frequency, Monetary) models to segment target groups and predict how consumers respond across different marketing channels.</p>
         </div>
       </div>
       <div class="approach-step reveal reveal-delay-2">
         <span class="step-num">02</span>
         <div>
-          <div class="step-title">Funnel Analytics & Conversion Gaps</div>
+          <div class="step-title">Funnel Analytics &amp; Conversion Gaps</div>
           <p class="step-body">Auditing user journeys to find where traffic drops off. I use GA4 and Looker Studio to track behavior across devices, analyze multi-channel attribution, and deliver clear recommendations to optimize conversion rates.</p>
         </div>
       </div>
       <div class="approach-step reveal reveal-delay-3">
         <span class="step-num">03</span>
         <div>
-          <div class="step-title">Lifecycle Campaigns & Testing</div>
+          <div class="step-title">Lifecycle Campaigns &amp; Testing</div>
           <p class="step-body">Designing targeted audience paths that guide customer engagement over time. I handle database segmentation, map out multi-channel wireframes, and deploy automated email workflows and list strategies in Mailchimp.</p>
         </div>
       </div>
       <div class="approach-step reveal reveal-delay-4">
         <span class="step-num">04</span>
         <div>
-          <div class="step-title">Performance Dashboards & Insights</div>
+          <div class="step-title">Performance Dashboards &amp; Insights</div>
           <p class="step-body">Consolidating raw marketing data into clean, real-time visualizations. I clean complex data pipelines using Python, then use Tableau and Streamlit to give stakeholders clear, actionable trends instead of just a data dump.</p>
         </div>
       </div>
@@ -637,7 +638,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       </div>
 
       <button class="proj-detail-toggle" onclick="toggleDetail(this)">
-        <span class="proj-detail-toggle-icon">+</span> Key findings & impact
+        <span class="proj-detail-toggle-icon">+</span> Key findings &amp; impact
       </button>
       <div class="proj-detail">
         <div style="margin-bottom:14px;">
@@ -668,11 +669,13 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
   </div>
 
   <div class="projects-grid">
+
+    <!-- GA4 CARD — now with links -->
     <div class="project-card reveal reveal-delay-1">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
         <div class="pc-num">GA4 Ecommerce Analytics — 02</div>
-        <h3 class="pc-title">Full-Funnel GA4 Analysis: Diagnosing a 90.3% Cart Abandonment Rate Across Channels & Devices</h3>
+        <h3 class="pc-title">Full-Funnel GA4 Analysis: Diagnosing a 90.3% Cart Abandonment Rate Across Channels &amp; Devices</h3>
         <div class="pc-tags">
           <span class="pc-tag">GA4</span><span class="pc-tag">Looker Studio</span><span class="pc-tag">Attribution Analysis</span><span class="pc-tag">Funnel Analysis</span>
         </div>
@@ -680,6 +683,11 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
         <div class="pc-finding" style="margin-top:8px;"><strong>Objective:</strong> Identify where the funnel was leaking, which channels were driving buyers vs. browsers, and whether last-click attribution was misrepresenting channel value.</div>
         <div class="pc-rec"><strong>Key Insight:</strong> The biggest drop-off was not at checkout — it was at the product page. 75.5% of users who viewed a product never added it to cart, pointing to a product page problem rather than a checkout problem. Desktop converted at 8.11% vs. 2.31% on mobile — a 3.5x gap signaling significant mobile UX issues. Under last-click attribution, Email and Organic Shopping appeared small; data-driven attribution revealed both were significantly undervalued, with Organic Shopping's revenue contribution jumping 17.31%.</div>
         <div class="pc-stat">$526K revenue · 20.54% conversion rate · 90-day analysis · 3-page Looker Studio dashboard</div>
+        <div style="display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap;">
+          <a href="https://datastudio.google.com/reporting/7c6442d3-76ef-46a0-90bf-eaa783f1b82b/page/E92yF" target="_blank" class="proj-link" style="font-size:0.8rem;">
+            <span class="proj-arrow-line"></span>Live dashboard
+          </a>
+        </div>
         <button class="pc-toggle" onclick="toggleCard(this)"><span class="pc-toggle-icon">+</span> Full case study</button>
         <div class="pc-drawer">
           <div class="pc-drawer-section">
@@ -698,47 +706,84 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
         <div class="pc-spacer"></div>
       </div>
     </div>
-    <div class="project-card reveal reveal-delay-2">
+
+    <!-- MENTAL HEALTH CARD — featured layout with Tableau embed -->
+    <div class="project-card reveal reveal-delay-2" style="grid-column: 1 / -1;">
       <div class="pc-overlay"></div>
-      <div class="project-card-inner">
-        <div class="pc-num">Audience Research & Data Analysis — 03</div>
-        <h3 class="pc-title">Longitudinal Audience Study: Tracking Behavioral Shifts Across a 4-Year Crisis</h3>
-        <div class="pc-tags">
-          <span class="pc-tag">Python</span><span class="pc-tag">SQL</span><span class="pc-tag">SQLite</span><span class="pc-tag">Pandas</span><span class="pc-tag">Tableau</span><span class="pc-tag">Longitudinal Analysis</span>
-        </div>
-        <div class="pc-finding"><strong>Business Problem:</strong> 398,884 student records across 4 years — each inconsistently structured, with no unified view of how mental health shifted before, during, and after COVID.</div>
-        <div class="pc-finding" style="margin-top:8px;"><strong>Objective:</strong> Identify which student populations were most at risk and whether institutional support resources aligned with actual need.</div>
-        <div class="pc-rec"><strong>Key Insight:</strong> Mental health symptoms peaked in Early Recovery (2021–22) — not during COVID. Universities scaled back therapy exactly when students needed it most.</div>
-        <div class="pc-stat">Depression hit 73% · Academic impairment stayed above 79% across all 4 years</div>
-        <button class="pc-toggle" onclick="toggleCard(this)"><span class="pc-toggle-icon">+</span> Full case study</button>
-        <div class="pc-drawer">
-          <div class="pc-drawer-section">
-            <div class="pc-drawer-label">Analysis</div>
-            <p class="pc-drawer-body">Built a Python + SQL pipeline that loaded 4 raw CSVs into SQLite, standardized inconsistent columns, and unified everything into a 398,884-row master table. Five SQL queries answered core research questions. Results visualized in Tableau.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;min-height:480px;position:relative;z-index:1;">
+        <!-- Tableau embed panel -->
+        <div style="position:relative;overflow:hidden;background:#0D2525;display:flex;flex-direction:column;">
+          <div class="pf-badge" style="position:absolute;top:26px;left:26px;z-index:2;">Audience Research &amp; Data Analysis — 03</div>
+          <div style="flex:1;display:flex;flex-direction:column;">
+            <div class='tableauPlaceholder' style='position:relative;flex:1;min-height:380px;'>
+              <noscript>
+                <a href='https://public.tableau.com/views/StudentMentalHealththeCOVIDCrisis/StudentMentalHealththeCOVIDCrisis' target='_blank'>
+                  <img alt='Student mental health &amp; the COVID crisis' src='https://public.tableau.com/static/images/St/StudentMentalHealththeCOVIDCrisis/StudentMentalHealththeCOVIDCrisis/1_rss.png' style='border:none;width:100%;height:100%;object-fit:cover;' />
+                </a>
+              </noscript>
+              <object class='tableauViz' style='width:100%;height:100%;min-height:380px;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='StudentMentalHealththeCOVIDCrisis&#47;StudentMentalHealththeCOVIDCrisis' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/St/StudentMentalHealththeCOVIDCrisis/StudentMentalHealththeCOVIDCrisis/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-GB' />
+              </object>
+            </div>
+            <div class="streamlit-caption">
+              <span class="streamlit-caption-text">Live dashboard — Tableau Public</span>
+              <a href="https://public.tableau.com/views/StudentMentalHealththeCOVIDCrisis/StudentMentalHealththeCOVIDCrisis" target="_blank" class="streamlit-open">Open full dashboard ↗</a>
+            </div>
           </div>
-          <div class="pc-drawer-section">
-            <div class="pc-drawer-label">Recommendation</div>
-            <p class="pc-drawer-body">Tracking therapy access is not the same as tracking academic recovery. Universities need longitudinal KPIs that follow students post-crisis, not just during it.</p>
+        </div>
+        <!-- Content panel -->
+        <div style="padding:50px 44px;display:flex;flex-direction:column;justify-content:center;">
+          <div class="pc-num" style="margin-bottom:14px;">Audience Research &amp; Data Analysis</div>
+          <h3 class="pc-title">Longitudinal Audience Study: Tracking Behavioral Shifts Across a 4-Year Crisis</h3>
+          <div class="pc-tags" style="margin-bottom:16px;">
+            <span class="pc-tag">Python</span><span class="pc-tag">SQL</span><span class="pc-tag">SQLite</span><span class="pc-tag">Pandas</span><span class="pc-tag">Tableau</span><span class="pc-tag">Longitudinal Analysis</span>
           </div>
-          <div class="pc-drawer-section">
-            <div class="pc-drawer-label">Impact</div>
-            <p class="pc-drawer-body">Identified highest-risk groups: non-binary students (84% depression, 95% academic impairment) and men least likely to access therapy (30%) despite 51% depression rates. Surfaced a resource allocation gap with direct policy implications.</p>
+          <div class="pc-finding"><strong>Business Problem:</strong> 398,884 student records across 4 years — each inconsistently structured, with no unified view of how mental health shifted before, during, and after COVID.</div>
+          <div class="pc-finding" style="margin-top:8px;"><strong>Objective:</strong> Identify which student populations were most at risk and whether institutional support resources aligned with actual need.</div>
+          <div class="pc-rec" style="margin-top:12px;"><strong>Key Insight:</strong> Mental health symptoms peaked in Early Recovery (2021–22) — not during COVID. Universities scaled back therapy exactly when students needed it most.</div>
+          <div class="pc-stat">Depression hit 73% · Academic impairment stayed above 79% across all 4 years</div>
+          <div style="display:flex;gap:16px;align-items:center;margin-top:16px;margin-bottom:14px;flex-wrap:wrap;">
+            <a href="https://public.tableau.com/views/StudentMentalHealththeCOVIDCrisis/StudentMentalHealththeCOVIDCrisis" target="_blank" class="proj-link" style="font-size:0.8rem;">
+              <span class="proj-arrow-line"></span>Live dashboard
+            </a>
+            <a href="https://github.com/Shweta-Kataria/student-mental-health-sql-analysis" target="_blank" class="proj-link-secondary">GitHub →</a>
+          </div>
+          <button class="pc-toggle" onclick="toggleCard(this)"><span class="pc-toggle-icon">+</span> Full case study</button>
+          <div class="pc-drawer">
+            <div class="pc-drawer-section">
+              <div class="pc-drawer-label">Analysis</div>
+              <p class="pc-drawer-body">Built a Python + SQL pipeline that loaded 4 raw CSVs into SQLite, standardized inconsistent columns, and unified everything into a 398,884-row master table. Five SQL queries answered core research questions. Results visualized in Tableau.</p>
+            </div>
+            <div class="pc-drawer-section">
+              <div class="pc-drawer-label">Recommendation</div>
+              <p class="pc-drawer-body">Tracking therapy access is not the same as tracking academic recovery. Universities need longitudinal KPIs that follow students post-crisis, not just during it.</p>
+            </div>
+            <div class="pc-drawer-section">
+              <div class="pc-drawer-label">Impact</div>
+              <p class="pc-drawer-body">Identified highest-risk groups: non-binary students (84% depression, 95% academic impairment) and men least likely to access therapy (30%) despite 51% depression rates. Surfaced a resource allocation gap with direct policy implications.</p>
+            </div>
           </div>
         </div>
-        <div style="display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap;">
-          <a href="https://public.tableau.com/app/profile/shweta.kataria/viz/StudentMentalHealththeCOVIDCrisis/Dashboard1" target="_blank" class="proj-link" style="font-size:0.8rem;">
-            <span class="proj-arrow-line"></span>Live dashboard
-          </a>
-          <a href="https://github.com/Shweta-Kataria/student-mental-health-sql-analysis" target="_blank" class="proj-link-secondary">GitHub →</a>
-        </div>
-        <div class="pc-spacer"></div>
       </div>
     </div>
+
     <div class="project-card reveal reveal-delay-3">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
-        <div class="pc-num">Lead Generation & Event Marketing — 04</div>
-        <h3 class="pc-title">Live Activation & Lead Capture: Total Solar Eclipse Campaign</h3>
+        <div class="pc-num">Lead Generation &amp; Event Marketing — 04</div>
+        <h3 class="pc-title">Live Activation &amp; Lead Capture: Total Solar Eclipse Campaign</h3>
         <div class="pc-tags">
           <span class="pc-tag">Event Marketing</span><span class="pc-tag">Lead Generation</span><span class="pc-tag">Adobe Suite</span>
         </div>
@@ -752,7 +797,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
     <div class="project-card reveal reveal-delay-4">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
-        <div class="pc-num">Lifecycle & Engagement Campaign — 05</div>
+        <div class="pc-num">Lifecycle &amp; Engagement Campaign — 05</div>
         <h3 class="pc-title">High-Touch Retention Campaign: Driving Emotional Engagement at Scale</h3>
         <div class="pc-tags">
           <span class="pc-tag">Experience Design</span><span class="pc-tag">Project Management</span><span class="pc-tag">Adobe Suite</span>
@@ -768,7 +813,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
             <p class="pc-drawer-body">Mapped what students typically experience around graduation — farewell events, department celebrations, time with faculty. Identified which moments had the highest emotional weight and could be recreated physically or virtually.</p>
           </div>
           <div class="pc-drawer-section">
-            <div class="pc-drawer-label">Recommendation & Action</div>
+            <div class="pc-drawer-label">Recommendation &amp; Action</div>
             <p class="pc-drawer-body">Coordinated personalized graduation boxes delivered to 800+ graduates — containing a "Pat on the Back" keepsake booklet, customized cookies, graduation props, a cap, and a virtual batch meetup with department breakout rooms.</p>
           </div>
           <div class="pc-drawer-section">
@@ -830,7 +875,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
           <span class="exp-org">The Brickers Foundation <em style="font-family:var(--font-body);font-size:0.72rem;font-style:normal;color:var(--taupe);font-weight:400;">(Nonprofit)</em></span>
           <span class="exp-dates">Sep 2025 – Present</span>
         </div>
-        <div class="exp-title">Marketing & Brand Strategist</div>
+        <div class="exp-title">Marketing &amp; Brand Strategist</div>
         <ul class="exp-bullets">
           <li>Created creative briefs using donor and engagement data to guide copy and design teams on audience targeting and campaign goals.</li>
           <li>Designed a comprehensive 6-month automated donor journey in Mailchimp; delivered finalized email architecture, audience segmentation rules, and wireframes to leadership for cross-functional implementation.</li>
@@ -856,7 +901,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
           <span class="exp-org">Shiv Nadar University</span>
           <span class="exp-dates">Sep 2019 – Mar 2022</span>
         </div>
-        <div class="exp-title">Marketing & Communications Executive</div>
+        <div class="exp-title">Marketing &amp; Communications Executive</div>
         <ul class="exp-bullets">
           <li>Segmented 10,000+ alumni records in Excel to identify high-engagement groups for targeted outreach campaigns.</li>
           <li>Led a multi-channel student engagement campaign for 800+ students, creating personalized print and digital content that generated 250+ organic UGC shares.</li>
@@ -916,7 +961,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
 
 <footer>
   <span class="footer-copy">© 2026 Shweta Kataria</span>
-  <span class="footer-mark">Dallas, TX · Open to Remote & Relocation</span>
+  <span class="footer-mark">Dallas, TX · Open to Remote &amp; Relocation</span>
 </footer>
 
 <script>
@@ -960,6 +1005,7 @@ function toggleDetail(btn) {
   btn.classList.toggle('open');
   btn.nextElementSibling.classList.toggle('open');
 }
+
 </script>
 </body>
 </html>
