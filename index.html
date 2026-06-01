@@ -302,6 +302,10 @@ nav.scrolled { background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); 
 .pc-image { margin: -42px -42px 26px; height: 200px; overflow: hidden; background: #0D2525; border-bottom: 1px solid rgba(245,240,232,0.08); position: relative; }
 .pc-image img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.35) brightness(0.82); transition: filter 0.6s var(--ease-venus), transform 0.7s var(--ease-venus); }
 .project-card:hover .pc-image img { filter: grayscale(0) brightness(1); transform: scale(1.045); }
+/* PROJECT CARD LIVE EMBED — live dashboard/tool preview in place of an image */
+.pc-embed { margin: -42px -42px 26px; height: 220px; overflow: hidden; background: #0D2525; border-bottom: 1px solid rgba(245,240,232,0.08); position: relative; }
+.pc-embed iframe { width: 100%; height: 100%; border: 0; display: block; background: #0D2525; }
+.pc-embed-badge { position: absolute; top: 12px; left: 12px; z-index: 2; background: var(--rose); color: var(--bone); font-family: var(--font-body); font-size: 0.55rem; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 9px; pointer-events: none; }
 /* MINOR CARD IMAGE — smaller banner, matches .project-minor padding (34px 30px) */
 .pm-image { margin: -34px -30px 20px; height: 150px; overflow: hidden; background: #0D2525; border-bottom: 1px solid rgba(245,240,232,0.08); position: relative; }
 .pm-image img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.35) brightness(0.82); transition: filter 0.6s var(--ease-venus), transform 0.7s var(--ease-venus); }
@@ -691,8 +695,9 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
     <div class="project-card reveal reveal-delay-1">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
-        <div class="pc-image">
-          <img src="images/ga4-analysis.webp" alt="GA4 funnel and channel attribution dashboard from the cart abandonment analysis" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
+        <div class="pc-embed">
+          <span class="pc-embed-badge">Live</span>
+          <iframe src="https://lookerstudio.google.com/embed/reporting/7c6442d3-76ef-46a0-90bf-eaa783f1b82b/page/E92yF" title="GA4 funnel and attribution dashboard" loading="lazy" allowfullscreen></iframe>
         </div>
         <div class="pc-num">GA4 Ecommerce Analytics — 02</div>
         <h3 class="pc-title">Full-Funnel GA4 Analysis: Diagnosing a 90.3% Cart Abandonment Rate Across Channels &amp; Devices</h3>
@@ -731,8 +736,9 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
     <div class="project-card reveal reveal-delay-2">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
-        <div class="pc-image">
-          <img src="images/ai-agent.webp" alt="Marketing AI command center interface with the social post, sentiment, and content calendar tools" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
+        <div class="pc-embed">
+          <span class="pc-embed-badge">Live</span>
+          <iframe src="https://shweta-kataria.github.io/jmark-marketing-ai-agent/jmark-ai-agent.html" title="JMark marketing AI agent — live tool" loading="lazy"></iframe>
         </div>
         <div class="pc-num">AI Agent &amp; Marketing Automation — 03</div>
         <h3 class="pc-title">Marketing AI Command Center: Three-Tool Automation Agent for B2B Brand Management</h3>
@@ -785,8 +791,9 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
     <div class="project-card reveal reveal-delay-3">
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
-        <div class="pc-image">
-          <img src="images/mental-health-study.webp" alt="Tableau dashboard visualizing four years of student mental health trends" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
+        <div class="pc-embed">
+          <span class="pc-embed-badge">Live</span>
+          <iframe src="https://public.tableau.com/views/StudentMentalHealththeCOVIDCrisis/StudentMentalHealththeCOVIDCrisis?:showVizHome=no&:embed=y&:display_count=no&:toolbar=no" title="Student mental health Tableau dashboard" loading="lazy"></iframe>
         </div>
         <div class="pc-num">Audience Research &amp; Data Analysis — 04</div>
         <h3 class="pc-title">Longitudinal Audience Study: Tracking Behavioral Shifts Across a 4-Year Crisis</h3>
@@ -827,7 +834,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
         <div class="pc-image">
-          <img src="images/eclipse-campaign.webp" alt="Solar eclipse selfie station activation at Cotton Bowl Stadium with QR-code lead capture" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
+          <img src="eclipse-campaign.webp" alt="Solar eclipse selfie station activation at Cotton Bowl Stadium with QR-code lead capture" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
         </div>
         <div class="pc-num">Lead Generation &amp; Event Marketing — 05</div>
         <h3 class="pc-title">Live Activation &amp; Lead Capture: Total Solar Eclipse Campaign</h3>
@@ -862,7 +869,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="pc-overlay"></div>
       <div class="project-card-inner">
         <div class="pc-image">
-          <img src="images/graduation-campaign.webp" alt="Personalized graduation keepsake box delivered to graduates as part of the retention campaign" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
+          <img src="graduation-campaign.webp" alt="Personalized graduation keepsake box delivered to graduates as part of the retention campaign" loading="lazy" onerror="this.closest('.pc-image').style.display='none'">
         </div>
         <div class="pc-num">Lifecycle &amp; Engagement Campaign — 06</div>
         <h3 class="pc-title">High-Touch Retention Campaign: Driving Emotional Engagement at Scale</h3>
@@ -903,7 +910,7 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
     </div>
     <div class="project-minor reveal reveal-delay-2">
       <div class="pm-image">
-        <img src="images/science-themed-campaigns.webp" alt="Science-themed campus activation campaign visuals" loading="lazy" onerror="this.closest('.pm-image').style.display='none'">
+        <img src="science-themed-campaigns.webp" alt="Science-themed campus activation campaign visuals" loading="lazy" onerror="this.closest('.pm-image').style.display='none'">
       </div>
       <div class="pm-cat">On-Campus Activation</div>
       <div class="pm-title">Science-Themed Campus Campaigns</div>
