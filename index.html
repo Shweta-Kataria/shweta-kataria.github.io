@@ -308,6 +308,14 @@ nav.scrolled { background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); 
 .project-card:hover .pc-banner-fig { color: rgba(245,240,232,0.30); }
 .pc-banner-tag { position: absolute; top: 15px; left: 16px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 0.55rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,240,232,0.62); }
 .pc-banner-tag i { width: 6px; height: 6px; border-radius: 50%; background: #7FB069; animation: pulse 2s infinite; }
+.pc-banner--art { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 13px; padding: 20px 22px; }
+.pc-art-hash { font-family: var(--font-display); font-size: 1.85rem; font-weight: 300; color: var(--bone); line-height: 1.04; letter-spacing: -0.01em; }
+.pc-art-hash em { font-style: italic; color: var(--rose-light); }
+.pc-art-foot { font-family: var(--font-body); font-size: 0.61rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,240,232,0.52); }
+.pc-flow { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.pc-flow-node { font-family: var(--font-body); font-size: 0.61rem; font-weight: 500; letter-spacing: 0.05em; color: var(--bone); border: 1px solid rgba(245,240,232,0.3); padding: 6px 11px; white-space: nowrap; transition: border-color 0.3s; }
+.project-card:hover .pc-flow-node { border-color: rgba(184,147,106,0.55); }
+.pc-flow-arr { color: var(--gold-light); font-size: 0.8rem; }
 
 .pc-num { font-family: var(--font-body); font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose); margin-bottom: 14px; }
 .pc-title { font-family: var(--font-display); font-size: clamp(1.2rem, 1.7vw, 1.65rem); font-weight: 300; color: var(--bone); line-height: 1.2; margin-bottom: 14px; }
@@ -699,9 +707,8 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="project-card reveal">
         <div class="pc-overlay"></div>
         <div class="project-card-inner">
-          <div class="pc-banner pc-banner--tile" style="background:linear-gradient(135deg,#16302F 0%,#0B1F1F 100%);">
-            <span class="pc-banner-tag"><i></i>Live · Looker Studio</span>
-            <span class="pc-banner-fig">90.3%</span>
+          <div class="pc-banner">
+            <img class="pc-banner-img" src="ga4-dashboard.webp" alt="GA4 funnel and attribution dashboard in Looker Studio" loading="lazy" onerror="this.closest('.pc-banner').style.display='none'">
           </div>
           <div class="pc-num">GA4 Ecommerce Analytics</div>
           <h3 class="pc-title">Diagnosing a 90.3% Cart Abandonment Rate Across Channels &amp; Devices</h3>
@@ -737,9 +744,8 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="project-card reveal reveal-delay-1">
         <div class="pc-overlay"></div>
         <div class="project-card-inner">
-          <div class="pc-banner pc-banner--tile" style="background:linear-gradient(135deg,#16302F 0%,#0B1F1F 100%);">
-            <span class="pc-banner-tag"><i></i>Live · Tableau</span>
-            <span class="pc-banner-fig">398K</span>
+          <div class="pc-banner">
+            <img class="pc-banner-img" src="mental-health-dashboard.webp" alt="Tableau dashboard from the four-year longitudinal study" loading="lazy" onerror="this.closest('.pc-banner').style.display='none'">
           </div>
           <div class="pc-num">Audience Research &amp; Data Analysis</div>
           <h3 class="pc-title">Longitudinal Audience Study: Behavioral Shifts Across a 4-Year Crisis</h3>
@@ -790,9 +796,8 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="project-card reveal">
         <div class="pc-overlay"></div>
         <div class="project-card-inner">
-          <div class="pc-banner pc-banner--tile" style="background:linear-gradient(135deg,#2A2114 0%,#19130A 100%);">
-            <span class="pc-banner-tag"><i></i>Live tool</span>
-            <span class="pc-banner-fig">GPT-4o</span>
+          <div class="pc-banner">
+            <img class="pc-banner-img" src="ai-agent.webp" alt="jMark marketing AI agent interface" loading="lazy" onerror="this.closest('.pc-banner').style.display='none'">
           </div>
           <div class="pc-num">AI Agent &amp; Marketing Automation</div>
           <h3 class="pc-title">Marketing AI Command Center: A Three-Tool Automation Agent</h3>
@@ -867,9 +872,16 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="project-card reveal reveal-delay-2">
         <div class="pc-overlay"></div>
         <div class="project-card-inner">
-          <div class="pc-banner pc-banner--tile" style="background:linear-gradient(135deg,#2A2114 0%,#19130A 100%);">
-            <span class="pc-banner-tag">Email Lifecycle</span>
-            <span class="pc-banner-fig">6-mo</span>
+          <div class="pc-banner pc-banner--art" style="background:linear-gradient(135deg,#2A2114 0%,#19130A 100%);">
+            <span class="pc-banner-tag">Mailchimp · Lifecycle</span>
+            <div class="pc-flow">
+              <span class="pc-flow-node">Welcome</span>
+              <span class="pc-flow-arr">→</span>
+              <span class="pc-flow-node">Donor Journey</span>
+              <span class="pc-flow-arr">→</span>
+              <span class="pc-flow-node">Win-back</span>
+            </div>
+            <span class="pc-art-foot">6-month program · 100% on-time</span>
           </div>
           <div class="pc-num">Lifecycle Email Strategy</div>
           <h3 class="pc-title">Building a Nonprofit's First Email Program From Scratch</h3>
@@ -935,9 +947,10 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       <div class="project-card reveal reveal-delay-1">
         <div class="pc-overlay"></div>
         <div class="project-card-inner">
-          <div class="pc-banner pc-banner--tile" style="background:linear-gradient(135deg,#2E2120 0%,#1A1312 100%);">
-            <span class="pc-banner-tag">Social Campaign</span>
-            <span class="pc-banner-fig">30%</span>
+          <div class="pc-banner pc-banner--art" style="background:linear-gradient(135deg,#2E2120 0%,#1A1312 100%);">
+            <span class="pc-banner-tag">Social Campaign · UGC</span>
+            <span class="pc-art-hash">#Shine<em>InQuarantine</em></span>
+            <span class="pc-art-foot">↑ 30% follower growth</span>
           </div>
           <div class="pc-num">Social Campaign</div>
           <h3 class="pc-title">#ShineInQuarantine: Turning Lockdown Into a Content Engine</h3>
