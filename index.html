@@ -516,6 +516,10 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
         <span class="hero-stat-number">398K+</span>
         <span class="hero-stat-label">Records consolidated into<br>automated data pipelines</span>
       </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-number">AI</span>
+        <span class="hero-stat-label">GEO/AEO auditing &amp; AI marketing<br>tools, built with the OpenAI API</span>
+      </div>
     </div>
   </div>
 </section>
@@ -612,6 +616,18 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
         <span class="tool-tag">Campaign Copywriting</span>
       </div>
     </div>
+    <div class="tool-card reveal reveal-delay-1">
+      <div class="tool-cat">AI &amp; Search Visibility</div>
+      <div class="tool-name">AI / GEO Tooling</div>
+      <p class="tool-desc">Building AI-powered marketing tools and measuring brand visibility in AI search (GEO/AEO). I use the OpenAI API to automate content, analyze sentiment, and audit how AI assistants recommend a brand.</p>
+      <div class="tool-tags">
+        <span class="tool-tag">OpenAI API</span>
+        <span class="tool-tag">GEO / AEO</span>
+        <span class="tool-tag">Prompt Engineering</span>
+        <span class="tool-tag">Streamlit</span>
+        <span class="tool-tag">LLM-as-Judge</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -702,6 +718,44 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
       </div>
     </div>
     <div class="projects-grid">
+
+      <!-- AI Visibility Auditor -->
+      <div class="project-card reveal">
+        <div class="pc-overlay"></div>
+        <div class="project-card-inner">
+          <div class="pc-banner">
+            <img class="pc-banner-img" src="ai-visibility-auditor.webp" alt="AI Visibility Auditor dashboard — visibility score, share of voice, and opportunity map" loading="lazy" onerror="this.closest('.pc-banner').style.display='none'">
+          </div>
+          <div class="pc-num">GEO / AEO · AI Search Analytics</div>
+          <h3 class="pc-title">AI Visibility Auditor: Measuring Brand Share-of-Voice in AI Search</h3>
+          <div class="pc-tags">
+            <span class="pc-tag">Python</span><span class="pc-tag">OpenAI API</span><span class="pc-tag">LLM-as-Judge</span><span class="pc-tag">Streamlit</span><span class="pc-tag">GEO / AEO</span>
+          </div>
+          <div class="pc-finding"><strong>Problem:</strong> Buyers increasingly ask AI <em>"who's the best provider for…"</em> — a new channel where being uncited loses pipeline that never shows up in analytics. No standard tool measures it.</div>
+          <div class="pc-rec"><strong>What I built:</strong> A company-agnostic tool that asks AI the real questions buyers ask, then scores how often a brand is recommended, how prominently, and against whom — a measurable Share-of-Voice score plus a ranked fix-list. Swap one config file to audit any business.</div>
+          <div class="pc-stat">60 AI answers scored · 20 buyer questions · config-driven for any brand</div>
+          <div class="pc-actions">
+            <a href="https://github.com/Shweta-Kataria/ai-visibility-auditor" target="_blank" class="pc-cta">GitHub repo ↗</a>
+            <span class="pc-cta-sec">Live tool available on request</span>
+          </div>
+          <button class="pc-toggle" onclick="toggleCard(this)"><span class="pc-toggle-icon">+</span> Full case study</button>
+          <div class="pc-drawer">
+            <div class="pc-drawer-section">
+              <div class="pc-drawer-label">The Method</div>
+              <p class="pc-drawer-body">One config file generates ~20 intent-weighted buyer questions. Each is asked multiple times in live-search mode, then a second AI model judges every answer — was the brand named, at what rank, with what sentiment, which competitors, which sources. Deterministic scoring turns those reports into a weighted Visibility Score. Separating extraction from scoring keeps every number auditable.</p>
+            </div>
+            <div class="pc-drawer-section">
+              <div class="pc-drawer-label">Sample Audit — a regional MSP</div>
+              <p class="pc-drawer-body">Strong on branded questions (cited ~100%, positive) but largely absent on high-intent discovery questions like "best provider in [city]" — the exact questions a new prospect asks. The pattern: strong AI reputation, weak AI discovery — a specific, fixable gap rather than a brand problem.</p>
+            </div>
+            <div class="pc-drawer-section">
+              <div class="pc-drawer-label">Built to Scale</div>
+              <p class="pc-drawer-body">Fully config-driven — one file swaps the tool from one business to any other, including sub-brands or executive profiles. Roadmap: trend tracking over time, scheduled audits, and more engines (Gemini, Perplexity).</p>
+            </div>
+          </div>
+          <div class="pc-spacer"></div>
+        </div>
+      </div>
 
       <!-- GA4 -->
       <div class="project-card reveal">
@@ -805,8 +859,8 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
             <span class="pc-tag">OpenAI GPT-4o</span><span class="pc-tag">JavaScript</span><span class="pc-tag">Prompt Engineering</span><span class="pc-tag">Automation</span>
           </div>
           <div class="pc-finding"><strong>Problem:</strong> Lean marketing teams burn hours weekly on repeatable work — drafting posts, triaging sentiment, planning calendars.</div>
-          <div class="pc-rec"><strong>What I built:</strong> A working agent with three tools — a brand-voice post generator, a sentiment analyzer with draft replies, and a two-week content-calendar builder. Brand voice lives in the prompts, not in templates.</div>
-          <div class="pc-stat">3 live tools · drafting cut from 45 min to 10 sec</div>
+          <div class="pc-rec"><strong>What I built:</strong> A reusable AI agent with three tools — a brand-voice post generator, a sentiment analyzer with draft replies, and a content-calendar builder. The brand's voice, values, and industry context live in editable inputs — swap them and the same engine writes in any company's voice.</div>
+          <div class="pc-stat">3 live tools · brand-agnostic engine · drafting cut from 45 min to 10 sec</div>
           <div class="pc-actions">
             <a href="https://shweta-kataria.github.io/jmark-marketing-ai-agent/jmark-ai-agent.html" target="_blank" class="pc-cta">Open live tool ↗</a>
             <a href="https://github.com/Shweta-Kataria/jmark-marketing-ai-agent" target="_blank" class="pc-cta-sec">GitHub →</a>
@@ -826,8 +880,8 @@ footer { padding: 26px 60px; background: var(--charcoal); border-top: 1px solid 
               <p class="pc-drawer-body">Input a campaign focus and target audience — get a structured two-week LinkedIn content plan mapped to specific industry verticals. Reduces calendar planning from hours to minutes.</p>
             </div>
             <div class="pc-drawer-section">
-              <div class="pc-drawer-label">How It Works</div>
-              <p class="pc-drawer-body">Each tool sends a system prompt — encoding brand voice, company values, and industry context — plus the user's input to GPT-4o via the OpenAI API. The strategic thinking lives in the prompts. The code is the container.</p>
+              <div class="pc-drawer-label">How It Works — &amp; how it scales</div>
+              <p class="pc-drawer-body">Each tool sends a system prompt encoding brand voice, values, and industry context, plus the user's input, to GPT-4o. I built it against a real brand's voice — but those inputs are editable, so the same engine instantly retargets to a different company, sub-brand, or executive. The strategy lives in the prompts; the code is the reusable container.</p>
             </div>
           </div>
           <div class="pc-spacer"></div>
