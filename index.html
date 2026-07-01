@@ -119,12 +119,6 @@ nav.scrolled { background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); 
   font-size: 0.88rem; font-weight: 300; line-height: 1.92;
   color: var(--taupe); max-width: 400px; margin-bottom: 8px;
 }
-.hero-seeking {
-  font-family: var(--font-display); font-style: italic;
-  font-size: 0.84rem; color: var(--gold);
-}
-
-.hero-stats { display: none; }
 
 .hero-bottom {
   display: flex; align-items: center; justify-content: space-between;
@@ -299,13 +293,10 @@ nav.scrolled { background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); 
 .pc-overlay { position: absolute; inset: 0; opacity: 0; background: var(--teal); transition: opacity 0.5s var(--ease-venus); z-index: 0; }
 .project-card:hover .pc-overlay { opacity: 1; }
 
-/* CARD BANNER — unified 180px top banner: a photo, or a metric tile */
+/* CARD BANNER — unified 180px top banner: a photo, or an art/flow tile */
 .pc-banner { margin: -42px -42px 26px; height: 180px; overflow: hidden; position: relative; background: #0D2525; border-bottom: 1px solid rgba(245,240,232,0.08); }
 .pc-banner-img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.3) brightness(0.85); transition: filter 0.6s var(--ease-venus), transform 0.7s var(--ease-venus); }
 .project-card:hover .pc-banner-img { filter: grayscale(0) brightness(1); transform: scale(1.045); }
-.pc-banner--tile { display: flex; align-items: flex-end; padding: 18px 22px; }
-.pc-banner-fig { font-family: var(--font-display); font-size: 3.8rem; font-weight: 300; line-height: 0.85; color: rgba(245,240,232,0.16); letter-spacing: -0.01em; transition: color 0.5s var(--ease-venus); }
-.project-card:hover .pc-banner-fig { color: rgba(245,240,232,0.30); }
 .pc-banner-tag { position: absolute; top: 15px; left: 16px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 0.55rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245,240,232,0.62); }
 .pc-banner-tag i { width: 6px; height: 6px; border-radius: 50%; background: #7FB069; animation: pulse 2s infinite; }
 .pc-banner--art { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 13px; padding: 20px 22px; }
@@ -390,10 +381,7 @@ nav.scrolled { background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); 
 .contact-email { font-family: var(--font-display); font-size: clamp(1rem, 1.55vw, 1.25rem); font-weight: 300; color: var(--bone); text-decoration: none; cursor: none; display: inline-block; position: relative; }
 .contact-email::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.5s var(--ease-venus); }
 .contact-email:hover::after { width: 100%; }
-.resume-download { display: inline-block; margin-top: 22px; font-family: var(--font-body); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bone); background: transparent; border: 1px solid rgba(245,240,232,0.25); text-decoration: none; padding: 12px 28px; cursor: none; position: relative; overflow: hidden; transition: border-color 0.3s; }
-.resume-download::before { content: ''; position: absolute; inset: 0; background: var(--gold); opacity: 0.15; transform: translateX(-101%); transition: transform 0.4s var(--ease-venus); }
-.resume-download:hover { border-color: var(--gold); }
-.resume-download:hover::before { transform: translateX(0); }
+.contact-right { display: flex; flex-direction: column; }
 .avail { display: flex; align-items: center; gap: 10px; margin-bottom: 38px; }
 .avail-dot { width: 7px; height: 7px; background: #7FB069; border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
